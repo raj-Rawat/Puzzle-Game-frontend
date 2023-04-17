@@ -1,12 +1,35 @@
 import Card from "react-bootstrap/Card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Collapse from 'react-bootstrap/Collapse';
 
+
 export default function Que1() {
+
+const getStartTime = async () => {
+  
+  try {
+
+    const res = await axios.get(`${process.env.REACT_APP_API}/getST`);
+    console.log(res.data);
+     
+    
+  } catch (error) {
+
+    console.log(error);
+    
+  }
+    
+};
+
+useEffect(() => {
+  getStartTime();
+}, []);
+
+
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
