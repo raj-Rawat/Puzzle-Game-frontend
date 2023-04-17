@@ -3,6 +3,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect} from "react";
+import { Helmet } from "react-helmet";
 
 export default function Dashboard() {
  
@@ -29,6 +30,9 @@ export default function Dashboard() {
   return (
 
     <>
+    <Helmet>
+      <title>Dashboard</title>
+    </Helmet>
    
       <Card className=" container d-flex mt-3" style={{ width: "auto" }}>
         <Card.Body>

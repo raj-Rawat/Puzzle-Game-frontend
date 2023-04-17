@@ -1,8 +1,13 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
+import { Helmet } from 'react-helmet';
 
 function About() {
   return (
+    <div>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
     <Card className="text-center fs-3">
     <Card.Header>About</Card.Header>
     <Card.Body>
@@ -16,6 +21,7 @@ function About() {
     </Card.Body>
     <Card.Footer className="text-muted"> Good luck on your treasure hunt   ~ Abhishek Rawat</Card.Footer>
   </Card>
+    </div>
   )
 }
 

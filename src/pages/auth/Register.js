@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { useAuth } from "../../context/auth.js";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 export default function Register(){
     // state
     const [username, setUsername] = useState("");
@@ -37,7 +38,11 @@ export default function Register(){
         }
     }
     return (
+
         <div>
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
             <Jumbotron title="Register"/>
             <div className="container mt-5">
                 <div className="row">

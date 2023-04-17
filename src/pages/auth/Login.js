@@ -47,6 +47,9 @@ export default function Login(){
     return (
         <div>
             <Jumbotron title="Login"/>
+           <helmet> 
+                <title>Login</title>
+            </helmet> 
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-6 offset-md-3">
